@@ -3,7 +3,6 @@ const connection = require('../database/conection');
 async function create(req,res) {
     const ong_id = req.headers.authorization;
     const {title, description, value} = req.body;
-
    const [id] = await connection('incidents').insert({
         title,
         description,
